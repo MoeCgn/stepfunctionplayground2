@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "title": "Zendesk Ticket",
+  "required": [
+    "id",
+    "requester_id",
+    "subject",
+    "custom_fields",
+    "updated_at",
+    "created_at"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "requester_id": {
+      "type": "integer"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "custom_fields": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "id": {
+            "type": [
+              "integer"
+            ]
+          },
+          "value": { }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

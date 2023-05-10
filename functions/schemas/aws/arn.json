@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "title": "Amazon Ressource Names",
+  "additionalProperties": false,
+  "required": [
+    "arn"
+  ],
+  "properties": {
+    "arn": {
+      "type": "string",
+      "pattern": "^arn:aws:[^:]+:[^:]*:(?:\\d{12}|\\*)?:.+$"
+    }
+  }
+}

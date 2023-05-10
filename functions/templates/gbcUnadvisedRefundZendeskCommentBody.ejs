@@ -1,0 +1,22 @@
+Order date: <%= orderDate %>
+Return date: <%= returnDate %>
+Tracking-ID: <%= trackingId %>
+Days between order und return: <%= differenceBetweenOrderAndReturnDateInDays %>
+Order: <%= linkToTheOrder %>
+
+Ordered items:
+<% orderedItems.forEach(function(orderedItem){ -%>
+- <%= orderedItem.quantity %>x <%= orderedItem.name %> (<%= orderedItem.sku %>) (<%= orderedItem.priceCentAmount/ 100 %> <%= refundCurrencyCode %>)
+<% }); -%>
+
+Returned items:
+<% returnedItems.forEach(function(returnedItem){ -%>
+- <%= returnedItem.quantity %>x <%= returnedItem.name %> (:<%= returnedItem.inOrder %>:) (<%= returnedItem.sku %>) (<%= returnedItem.unsaleable %> not sellable / <%= returnedItem.resaleable %> sellable)
+<% }); -%>
+
+<% if(locals.refundCentAmount){ %>Total amount to be reimbursed: <%= locals.refundCentAmount / 100 %> <%= refundCurrencyCode %><% } %>
+
+
+Legend:
+- :white_check_mark: part of the order
+- :x: not part of the order

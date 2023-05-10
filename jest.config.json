@@ -1,0 +1,24 @@
+{
+  "testEnvironment": "jest-environment-node",
+  "testMatch": ["**/tests/**/*.test.(m)js", "**/tests/*.test.(m)js"],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/__tests__/",
+    "/layer/nodejs/node_modules"
+  ],
+  "setupFiles": ["dotenv/config"],
+  "moduleNameMapper": {
+    "axios": "axios/dist/node/axios.cjs"
+  },
+  "modulePaths": [
+    "<rootDir>/node_modules",
+    "<rootDir>/layer/nodejs/node_modules"
+  ],
+  "moduleFileExtensions": [
+    "mjs",
+    "js"
+  ],
+  "moduleDirectories": [
+    "node_modules"
+  ]
+}

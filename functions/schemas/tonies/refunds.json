@@ -1,0 +1,31 @@
+{
+  "type": "array",
+  "title": "Tonies Refunds",
+  "items": {
+    "type": "object",
+    "required": [
+      "quantity",
+      "reason",
+      "lineItemId",
+      "productId",
+      "sku"
+    ],
+    "properties": {
+      "quantity": {
+        "type": "integer"
+      },
+      "reason": {
+        "type": "integer"
+      },
+      "lineItemId": {
+        "type": "string"
+      },
+      "productId": {
+        "type": "string"
+      },
+      "sku": {
+        "type": "string"
+      }
+    }
+  }
+}

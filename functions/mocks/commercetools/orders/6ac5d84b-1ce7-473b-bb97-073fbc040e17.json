@@ -1,0 +1,946 @@
+{
+  "type": "Order",
+  "id": "6ac5d84b-1ce7-473b-bb97-073fbc040e17",
+  "version": 1,
+  "versionModifiedAt": "2023-01-30T15:54:35.391Z",
+  "lastMessageSequenceNumber": 1,
+  "createdAt": "2023-01-30T15:54:35.351Z",
+  "lastModifiedAt": "2023-01-30T15:54:35.351Z",
+  "lastModifiedBy": {
+    "clientId": "KepsbEDsTOhpge1v8b8ASqMt",
+    "isPlatformClient": false
+  },
+  "createdBy": {
+    "clientId": "KepsbEDsTOhpge1v8b8ASqMt",
+    "isPlatformClient": false
+  },
+  "orderNumber": "HS2023013015543583",
+  "customerId": "da6af0e1-93b6-4d2c-b40d-fbb759fcad10",
+  "customerEmail": "alexander.jaeger+dev@ext.tonies.com",
+  "customerGroup": {
+    "typeId": "customer-group",
+    "id": "1f5ae4b2-8092-4680-a9e6-3b1bf6cd7dfe"
+  },
+  "totalPrice": {
+    "type": "centPrecision",
+    "currencyCode": "EUR",
+    "centAmount": 11729,
+    "fractionDigits": 2
+  },
+  "taxedPrice": {
+    "totalNet": {
+      "type": "centPrecision",
+      "currencyCode": "EUR",
+      "centAmount": 11729,
+      "fractionDigits": 2
+    },
+    "totalGross": {
+      "type": "centPrecision",
+      "currencyCode": "EUR",
+      "centAmount": 13958,
+      "fractionDigits": 2
+    },
+    "taxPortions": [
+      {
+        "rate": 0.19,
+        "amount": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 2229,
+          "fractionDigits": 2
+        },
+        "name": "19% MwSt. "
+      }
+    ],
+    "totalTax": {
+      "type": "centPrecision",
+      "currencyCode": "EUR",
+      "centAmount": 2229,
+      "fractionDigits": 2
+    }
+  },
+  "country": "DE",
+  "taxedShippingPrice": {
+    "totalNet": {
+      "type": "centPrecision",
+      "currencyCode": "EUR",
+      "centAmount": 425,
+      "fractionDigits": 2
+    },
+    "totalGross": {
+      "type": "centPrecision",
+      "currencyCode": "EUR",
+      "centAmount": 506,
+      "fractionDigits": 2
+    },
+    "taxPortions": [
+      {
+        "rate": 0.19,
+        "amount": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 81,
+          "fractionDigits": 2
+        },
+        "name": "19% MwSt. "
+      }
+    ],
+    "totalTax": {
+      "type": "centPrecision",
+      "currencyCode": "EUR",
+      "centAmount": 81,
+      "fractionDigits": 2
+    }
+  },
+  "orderState": "Open",
+  "shipmentState": "Pending",
+  "paymentState": "Pending",
+  "syncInfo": [],
+  "returnInfo": [],
+  "taxMode": "Platform",
+  "inventoryMode": "ReserveOnOrder",
+  "taxRoundingMode": "HalfEven",
+  "taxCalculationMode": "LineItemLevel",
+  "origin": "Customer",
+  "shippingMode": "Single",
+  "shippingInfo": {
+    "shippingMethodName": "Standard",
+    "price": {
+      "type": "centPrecision",
+      "currencyCode": "EUR",
+      "centAmount": 425,
+      "fractionDigits": 2
+    },
+    "shippingRate": {
+      "price": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 425,
+        "fractionDigits": 2
+      },
+      "freeAbove": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 15000,
+        "fractionDigits": 2
+      },
+      "tiers": []
+    },
+    "taxRate": {
+      "name": "19% MwSt. ",
+      "amount": 0.19,
+      "includedInPrice": false,
+      "country": "DE",
+      "id": "NFx03vhG",
+      "subRates": []
+    },
+    "taxCategory": {
+      "typeId": "tax-category",
+      "id": "f2d5aafd-ffca-4767-9817-abfacce7d8f5"
+    },
+    "deliveries": [],
+    "shippingMethod": {
+      "typeId": "shipping-method",
+      "id": "216759a5-eb35-4179-8a4a-528c616decbb"
+    },
+    "taxedPrice": {
+      "totalNet": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 425,
+        "fractionDigits": 2
+      },
+      "totalGross": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 506,
+        "fractionDigits": 2
+      },
+      "totalTax": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 81,
+        "fractionDigits": 2
+      }
+    },
+    "shippingMethodState": "MatchesCart"
+  },
+  "shippingAddress": {
+    "id": "HkzK3WbP",
+    "firstName": "Tina",
+    "lastName": "Jäger",
+    "streetName": "Kerbelweg",
+    "streetNumber": "1a",
+    "postalCode": "50259",
+    "city": "Pulheim",
+    "country": "DE",
+    "company": "YogaTraum Pulheim ",
+    "email": "alexander.jaeger@ext.tonies.com"
+  },
+  "shipping": [],
+  "lineItems": [
+    {
+      "id": "6d355561-907f-455c-bc4d-ff7260275ccd",
+      "productId": "423f4ea9-736e-4dd8-8910-53ce1177c22f",
+      "name": {
+        "de": "Die Schlümpfe - Ein unwiderschlumpfliches Lächeln"
+      },
+      "productType": {
+        "typeId": "product-type",
+        "id": "37903a41-eaaa-4b9e-ad49-ad22089f30c3",
+        "version": 207
+      },
+      "productSlug": {
+        "de": "die-schlmpfe-ein-unwiderschlumpfliches-lcheln"
+      },
+      "variant": {
+        "id": 1,
+        "sku": "10001677",
+        "prices": [
+          {
+            "id": "d4dfffaf-158c-4be0-819b-40b90425cc4d",
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 1047,
+              "fractionDigits": 2
+            }
+          }
+        ],
+        "images": [
+          {
+            "url": "https://ba00e61312ddd2141137-24c980c5360ca59c09a778f56f7b524b.ssl.cf3.rackcdn.com/10001677-50003915-j-AP7EUwgj.png",
+            "label": "hero-b2b",
+            "dimensions": {
+              "w": 1200,
+              "h": 900
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Artikelnummer",
+            "value": "10001677"
+          },
+          {
+            "name": "Neu-date",
+            "value": "2023-04-10"
+          },
+          {
+            "name": "ktlizenz",
+            "value": "Die Schlümpfe"
+          },
+          {
+            "name": "EAN",
+            "value": 4251192128980
+          }
+        ],
+        "assets": [],
+        "availability": {
+          "isOnStock": true,
+          "availableQuantity": 89,
+          "version": 7,
+          "id": "4dbc7066-9551-4307-ab30-47140f2cc32e"
+        }
+      },
+      "price": {
+        "id": "d4dfffaf-158c-4be0-819b-40b90425cc4d",
+        "value": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 1047,
+          "fractionDigits": 2
+        }
+      },
+      "quantity": 3,
+      "discountedPrice": {
+        "value": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 942,
+          "fractionDigits": 2
+        },
+        "includedDiscounts": [
+          {
+            "discount": {
+              "typeId": "cart-discount",
+              "id": "f57e9de1-3945-429d-8e86-5de9a8a2e82e"
+            },
+            "discountedAmount": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 105,
+              "fractionDigits": 2
+            }
+          }
+        ]
+      },
+      "discountedPricePerQuantity": [
+        {
+          "quantity": 3,
+          "discountedPrice": {
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 942,
+              "fractionDigits": 2
+            },
+            "includedDiscounts": [
+              {
+                "discount": {
+                  "typeId": "cart-discount",
+                  "id": "f57e9de1-3945-429d-8e86-5de9a8a2e82e"
+                },
+                "discountedAmount": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 105,
+                  "fractionDigits": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "taxRate": {
+        "name": "19% MwSt. ",
+        "amount": 0.19,
+        "includedInPrice": false,
+        "country": "DE",
+        "id": "NFx03vhG",
+        "subRates": []
+      },
+      "perMethodTaxRate": [],
+      "addedAt": "2023-01-30T15:51:22.638Z",
+      "lastModifiedAt": "2023-01-30T15:51:22.638Z",
+      "state": [
+        {
+          "quantity": 3,
+          "state": {
+            "typeId": "state",
+            "id": "26e56c8c-1291-4ec5-bf0c-a03b721c68c1"
+          }
+        }
+      ],
+      "priceMode": "Platform",
+      "lineItemMode": "Standard",
+      "totalPrice": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 2826,
+        "fractionDigits": 2
+      },
+      "taxedPrice": {
+        "totalNet": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 2826,
+          "fractionDigits": 2
+        },
+        "totalGross": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 3363,
+          "fractionDigits": 2
+        },
+        "totalTax": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 537,
+          "fractionDigits": 2
+        }
+      },
+      "taxedPricePortions": []
+    },
+    {
+      "id": "c6ab6072-4a84-496d-8428-3ffbe928ca93",
+      "productId": "d197b555-017a-4777-939e-91842c356823",
+      "name": {
+        "de": "Die Schlümpfe - Ein tollpatschiger Held"
+      },
+      "productType": {
+        "typeId": "product-type",
+        "id": "37903a41-eaaa-4b9e-ad49-ad22089f30c3",
+        "version": 207
+      },
+      "productSlug": {
+        "de": "die-schlmpfe-ein-tollpatschiger-held"
+      },
+      "variant": {
+        "id": 1,
+        "sku": "10000478",
+        "prices": [
+          {
+            "id": "604014df-c6a4-450d-b823-21bdcdf764c9",
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 1047,
+              "fractionDigits": 2
+            }
+          }
+        ],
+        "images": [
+          {
+            "url": "https://ba00e61312ddd2141137-24c980c5360ca59c09a778f56f7b524b.ssl.cf3.rackcdn.com/10000478-50003911-j-24Pn4OCg.png",
+            "label": "hero-b2b",
+            "dimensions": {
+              "w": 1200,
+              "h": 900
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Artikelnummer",
+            "value": "10000478"
+          },
+          {
+            "name": "Neu-date",
+            "value": "2023-04-10"
+          },
+          {
+            "name": "EAN",
+            "value": 4251192116345
+          },
+          {
+            "name": "ktlizenz",
+            "value": "Die Schlümpfe"
+          }
+        ],
+        "assets": [],
+        "availability": {
+          "isOnStock": true,
+          "availableQuantity": 140,
+          "version": 3,
+          "id": "63e27efb-80d5-4ef4-bf7f-8944144cd00f"
+        }
+      },
+      "price": {
+        "id": "604014df-c6a4-450d-b823-21bdcdf764c9",
+        "value": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 1047,
+          "fractionDigits": 2
+        }
+      },
+      "quantity": 4,
+      "discountedPrice": {
+        "value": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 942,
+          "fractionDigits": 2
+        },
+        "includedDiscounts": [
+          {
+            "discount": {
+              "typeId": "cart-discount",
+              "id": "f57e9de1-3945-429d-8e86-5de9a8a2e82e"
+            },
+            "discountedAmount": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 105,
+              "fractionDigits": 2
+            }
+          }
+        ]
+      },
+      "discountedPricePerQuantity": [
+        {
+          "quantity": 4,
+          "discountedPrice": {
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 942,
+              "fractionDigits": 2
+            },
+            "includedDiscounts": [
+              {
+                "discount": {
+                  "typeId": "cart-discount",
+                  "id": "f57e9de1-3945-429d-8e86-5de9a8a2e82e"
+                },
+                "discountedAmount": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 105,
+                  "fractionDigits": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "taxRate": {
+        "name": "19% MwSt. ",
+        "amount": 0.19,
+        "includedInPrice": false,
+        "country": "DE",
+        "id": "NFx03vhG",
+        "subRates": []
+      },
+      "perMethodTaxRate": [],
+      "addedAt": "2023-01-30T15:51:24.177Z",
+      "lastModifiedAt": "2023-01-30T15:51:24.177Z",
+      "state": [
+        {
+          "quantity": 4,
+          "state": {
+            "typeId": "state",
+            "id": "26e56c8c-1291-4ec5-bf0c-a03b721c68c1"
+          }
+        }
+      ],
+      "priceMode": "Platform",
+      "lineItemMode": "Standard",
+      "totalPrice": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 3768,
+        "fractionDigits": 2
+      },
+      "taxedPrice": {
+        "totalNet": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 3768,
+          "fractionDigits": 2
+        },
+        "totalGross": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 4484,
+          "fractionDigits": 2
+        },
+        "totalTax": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 716,
+          "fractionDigits": 2
+        }
+      },
+      "taxedPricePortions": []
+    },
+    {
+      "id": "fee57ffc-d933-47d6-995b-a2568fb087be",
+      "productId": "7f44f301-685f-44cd-9945-a3343373db1a",
+      "name": {
+        "de": "POS Ellipsenaufsteller mit Gummizugmechanik "
+      },
+      "productType": {
+        "typeId": "product-type",
+        "id": "37903a41-eaaa-4b9e-ad49-ad22089f30c3",
+        "version": 207
+      },
+      "productSlug": {
+        "de": "pos-ellipsenaufsteller"
+      },
+      "variant": {
+        "id": 1,
+        "sku": "10003056",
+        "prices": [
+          {
+            "id": "e385b7d6-69af-4a82-97eb-5049953d6b5a",
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 1,
+              "fractionDigits": 2
+            },
+            "discounted": {
+              "value": {
+                "type": "centPrecision",
+                "currencyCode": "EUR",
+                "centAmount": 0,
+                "fractionDigits": 2
+              },
+              "discount": {
+                "typeId": "product-discount",
+                "id": "27cfe712-986c-426c-9520-f42bc5490900"
+              }
+            }
+          }
+        ],
+        "images": [
+          {
+            "url": "https://ba00e61312ddd2141137-24c980c5360ca59c09a778f56f7b524b.ssl.cf3.rackcdn.com/Mockup-Ellipsenaufst-SxFhhkWS.png",
+            "label": "hero-b2b",
+            "dimensions": {
+              "w": 1024,
+              "h": 696
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Artikelnummer",
+            "value": "10003056"
+          },
+          {
+            "name": "ktlizenz",
+            "value": "POS Ellipsen-Aufsteller"
+          },
+          {
+            "name": "EAN",
+            "value": 4251192146137
+          },
+          {
+            "name": "max-order-amount",
+            "value": 1
+          }
+        ],
+        "assets": [],
+        "availability": {
+          "isOnStock": true,
+          "availableQuantity": 23,
+          "version": 15,
+          "id": "bb9e02bc-6cba-444f-ba89-c2dc9ec66a0b"
+        }
+      },
+      "price": {
+        "id": "e385b7d6-69af-4a82-97eb-5049953d6b5a",
+        "value": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 1,
+          "fractionDigits": 2
+        },
+        "discounted": {
+          "value": {
+            "type": "centPrecision",
+            "currencyCode": "EUR",
+            "centAmount": 0,
+            "fractionDigits": 2
+          },
+          "discount": {
+            "typeId": "product-discount",
+            "id": "27cfe712-986c-426c-9520-f42bc5490900"
+          }
+        }
+      },
+      "quantity": 1,
+      "discountedPrice": {
+        "value": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 0,
+          "fractionDigits": 2
+        },
+        "includedDiscounts": [
+          {
+            "discount": {
+              "typeId": "cart-discount",
+              "id": "f57e9de1-3945-429d-8e86-5de9a8a2e82e"
+            },
+            "discountedAmount": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 0,
+              "fractionDigits": 2
+            }
+          }
+        ]
+      },
+      "discountedPricePerQuantity": [
+        {
+          "quantity": 1,
+          "discountedPrice": {
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 0,
+              "fractionDigits": 2
+            },
+            "includedDiscounts": [
+              {
+                "discount": {
+                  "typeId": "cart-discount",
+                  "id": "f57e9de1-3945-429d-8e86-5de9a8a2e82e"
+                },
+                "discountedAmount": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 0,
+                  "fractionDigits": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "taxRate": {
+        "name": "19% MwSt. ",
+        "amount": 0.19,
+        "includedInPrice": false,
+        "country": "DE",
+        "id": "NFx03vhG",
+        "subRates": []
+      },
+      "perMethodTaxRate": [],
+      "addedAt": "2023-01-30T15:51:25.256Z",
+      "lastModifiedAt": "2023-01-30T15:51:25.256Z",
+      "state": [
+        {
+          "quantity": 1,
+          "state": {
+            "typeId": "state",
+            "id": "26e56c8c-1291-4ec5-bf0c-a03b721c68c1"
+          }
+        }
+      ],
+      "priceMode": "Platform",
+      "lineItemMode": "Standard",
+      "totalPrice": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 0,
+        "fractionDigits": 2
+      },
+      "taxedPrice": {
+        "totalNet": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 0,
+          "fractionDigits": 2
+        },
+        "totalGross": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 0,
+          "fractionDigits": 2
+        },
+        "totalTax": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 0,
+          "fractionDigits": 2
+        }
+      },
+      "taxedPricePortions": []
+    },
+    {
+      "id": "30574346-503a-4fe5-99fd-4896cf694726",
+      "productId": "a8d0e66c-c94f-4efb-8067-97643b2fafc5",
+      "name": {
+        "de": "Das Waisenfohlen"
+      },
+      "productType": {
+        "typeId": "product-type",
+        "id": "37903a41-eaaa-4b9e-ad49-ad22089f30c3",
+        "version": 207
+      },
+      "productSlug": {
+        "de": "das-waisenfohlen"
+      },
+      "variant": {
+        "id": 1,
+        "sku": "10000493",
+        "prices": [
+          {
+            "id": "d653c00c-05ee-4e61-85ff-239495231a72",
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 899,
+              "fractionDigits": 2
+            },
+            "validUntil": "2022-04-29T21:59:59.000Z"
+          },
+          {
+            "id": "c33eb6d9-b323-444f-8330-f6dcd417a6d6",
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 1047,
+              "fractionDigits": 2
+            },
+            "validFrom": "2022-04-29T22:00:00.000Z"
+          }
+        ],
+        "images": [
+          {
+            "url": "https://c502eb5050b5165935cf-01abebf58e0aa7526242f611869e77b3.ssl.cf3.rackcdn.com/10000493-50001555-a-ZlcnrRSr.png",
+            "label": "hero-b2b",
+            "dimensions": {
+              "w": 1200,
+              "h": 900
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Artikelnummer",
+            "value": "10000493"
+          },
+          {
+            "name": "ktlizenz",
+            "value": "Bibi & Tina"
+          },
+          {
+            "name": "max-order-amount",
+            "value": 240
+          }
+        ],
+        "assets": [],
+        "availability": {
+          "isOnStock": true,
+          "availableQuantity": 137,
+          "version": 5,
+          "id": "ca6c5d4f-ece5-4efe-afe7-94cca6d6994c"
+        }
+      },
+      "price": {
+        "id": "c33eb6d9-b323-444f-8330-f6dcd417a6d6",
+        "value": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 1047,
+          "fractionDigits": 2
+        },
+        "validFrom": "2022-04-29T22:00:00.000Z"
+      },
+      "quantity": 5,
+      "discountedPrice": {
+        "value": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 942,
+          "fractionDigits": 2
+        },
+        "includedDiscounts": [
+          {
+            "discount": {
+              "typeId": "cart-discount",
+              "id": "f57e9de1-3945-429d-8e86-5de9a8a2e82e"
+            },
+            "discountedAmount": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 105,
+              "fractionDigits": 2
+            }
+          }
+        ]
+      },
+      "discountedPricePerQuantity": [
+        {
+          "quantity": 5,
+          "discountedPrice": {
+            "value": {
+              "type": "centPrecision",
+              "currencyCode": "EUR",
+              "centAmount": 942,
+              "fractionDigits": 2
+            },
+            "includedDiscounts": [
+              {
+                "discount": {
+                  "typeId": "cart-discount",
+                  "id": "f57e9de1-3945-429d-8e86-5de9a8a2e82e"
+                },
+                "discountedAmount": {
+                  "type": "centPrecision",
+                  "currencyCode": "EUR",
+                  "centAmount": 105,
+                  "fractionDigits": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "taxRate": {
+        "name": "19% MwSt. ",
+        "amount": 0.19,
+        "includedInPrice": false,
+        "country": "DE",
+        "id": "NFx03vhG",
+        "subRates": []
+      },
+      "perMethodTaxRate": [],
+      "addedAt": "2023-01-30T15:51:31.565Z",
+      "lastModifiedAt": "2023-01-30T15:51:31.565Z",
+      "state": [
+        {
+          "quantity": 5,
+          "state": {
+            "typeId": "state",
+            "id": "26e56c8c-1291-4ec5-bf0c-a03b721c68c1"
+          }
+        }
+      ],
+      "priceMode": "Platform",
+      "lineItemMode": "Standard",
+      "totalPrice": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 4710,
+        "fractionDigits": 2
+      },
+      "taxedPrice": {
+        "totalNet": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 4710,
+          "fractionDigits": 2
+        },
+        "totalGross": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 5605,
+          "fractionDigits": 2
+        },
+        "totalTax": {
+          "type": "centPrecision",
+          "currencyCode": "EUR",
+          "centAmount": 895,
+          "fractionDigits": 2
+        }
+      },
+      "taxedPricePortions": []
+    }
+  ],
+  "customLineItems": [],
+  "transactionFee": true,
+  "discountCodes": [],
+  "directDiscounts": [],
+  "cart": {
+    "typeId": "cart",
+    "id": "96c9671f-6a6b-45f1-bc86-30d6acb988b1"
+  },
+  "custom": {
+    "type": {
+      "typeId": "type",
+      "id": "22cbb133-943f-4788-b1da-2dad43db8838"
+    },
+    "fields": {
+      "launchAt": "2023-04-10T00:00:00.000Z"
+    }
+  },
+  "paymentInfo": {
+    "payments": [
+      {
+        "typeId": "payment",
+        "id": "da19bd13-540c-4cd6-b7e9-6ea7e4a2299c"
+      }
+    ]
+  },
+  "billingAddress": {
+    "id": "HkzK3WbP",
+    "firstName": "Tina",
+    "lastName": "Jäger",
+    "streetName": "Kerbelweg",
+    "streetNumber": "1a",
+    "postalCode": "50259",
+    "city": "Pulheim",
+    "country": "DE",
+    "company": "YogaTraum Pulheim ",
+    "email": "alexander.jaeger@ext.tonies.com"
+  },
+  "itemShippingAddresses": [],
+  "refusedGifts": []
+}

@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "title": "Commercetools Address",
+  "required": [
+    "country",
+    "firstName",
+    "lastName",
+    "streetName",
+    "streetNumber",
+    "postalCode",
+    "city"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "salutation": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "firstName": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "lastName": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "streetName": {
+      "type": "string",
+      "maxLength": 25
+    },
+    "streetNumber": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "additionalStreetInfo": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "postalCode": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "city": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "company": {
+      "type": "string",
+      "maxLength": 30
+    }
+  }
+}

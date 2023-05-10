@@ -1,0 +1,36 @@
+---
+name: analyzeCustomer${self:custom.titledStage}
+
+role:
+  Fn::GetAtt: [ StepFunctionExecutionRole, Arn ]
+
+loggingConfig:
+  level: ALL
+  includeExecutionData: true
+  destinations:
+    - Fn::GetAtt: [ StepFunctionLogGroup, Arn ]
+
+events:
+  - http:
+      path: post/create
+      method: POST
+
+definition:
+  StartAt: Get people
+  States:
+    Get people:
+      Type: Pass
+      Next: Write contact to Hubspot
+    Write contact to Hubspot:
+      Type: Task
+      Resource: !GetAtt Http.Arn
+      Parameters:
+        request:
+          baseURL: "https://api.hubspot.com/crm/v3/objects/contacts"
+          properties:
+            - email": example@hubspot.com
+            - firstname: Jane
+            - lastname: Doe
+          method: 'POST'
+      ResultPath: $.people
+      End: true

@@ -1,0 +1,57 @@
+---
+name: getStarships${self:custom.titledStage}
+
+role:
+  Fn::GetAtt: [ StepFunctionExecutionRole, Arn ]
+
+loggingConfig:
+  level: ALL
+  includeExecutionData: true
+  destinations:
+    - Fn::GetAtt: [ StepFunctionLogGroup, Arn ]
+
+definition:
+  StartAt: Get people
+  States:
+    Get people:
+      Type: Task
+      Resource: !GetAtt Http.Arn
+      Parameters:
+        request:
+          baseURL: "https://swapi.dev/api"
+          path.$: States.Format('/people/{}', $.peopleNumber)
+          method: 'GET'
+      ResultPath: $.people
+      Next: Get starship urls
+    Get starship urls:
+      Type: Task
+      Resource: !GetAtt Transformer.Arn
+#Funktion der Lampbda: Jsonata?
+      Parameters:
+        input:
+          people.$: $.people 
+        query: $.people.(starships)
+      ResultPath: $.starShipUrls
+      Next: Fetch starship from starship urls
+    Fetch starship from starship urls:
+      Type: Map
+      ItemsPath: $.starShipUrls
+      ItemSelector:
+        request:
+          baseURL: "https://swapi.dev/api"
+          method: GET
+          path.$: States.Format('/starships/{}',States.ArrayGetItem(States.StringSplit($$.Map.Item.Value, '/'),4))
+          #The $$.Map.Item.Value context object contains the value of each individual data item.
+      ItemProcessor:
+        ProcessorConfig:
+          Mode: INLINE
+        StartAt: Get starships from swapi
+        States:
+          Get starships from swapi:
+            Type: Task
+            Resource: !GetAtt Http.Arn
+            End: true
+      ResultPath: $.swapi.starships
+      Next: Got Starships
+    Got Starships:
+      Type: Succeed

@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "title": "DHL Address",
+  "required": [
+    "name1",
+    "streetName",
+    "houseNumber",
+    "postCode",
+    "city",
+    "country"
+  ],
+  "properties": {
+    "name1": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "streetName": {
+      "type": "string",
+      "maxLength": 25
+    },
+    "houseNumber": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "postCode": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "city": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "country": {
+      "type": "object",
+      "required": ["countryISOCode"],
+      "properties": {
+        "countryISOCode": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        }
+      }
+    }
+  }
+}

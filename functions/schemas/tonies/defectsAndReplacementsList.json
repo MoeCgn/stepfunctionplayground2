@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "title": "List of defects and replacements",
+  "additionalProperties": false,
+  "required": [
+    "defects",
+    "replacements"
+  ],
+  "properties": {
+    "defects": {
+      "type": "array",
+      "items":{
+        "type": "string"
+      }
+    },
+    "replacements": {
+      "type": "array",
+      "items":{
+        "type": "string"
+      }
+    }
+  }
+}

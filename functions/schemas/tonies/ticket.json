@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "title": "Tonies Zendesk Ticket",
+  "required": [
+    "id",
+    "requesterId",
+    "subject",
+    "customFields",
+    "updatedAt",
+    "createdAt"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "requesterId": {
+      "type": "integer"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "customFields": {
+      "type": "object"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

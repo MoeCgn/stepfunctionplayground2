@@ -1,0 +1,137 @@
+---
+service: stepFunctionPlayground
+frameworkVersion: '3'
+
+custom:
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, self:provider.region}
+  accountId: ${aws:accountId}
+  titledStage: ${capitalize(${self:custom.stage})}
+  logRetentionInDays: ${file(./config.cjs):logRetentionInDays}
+  stackName: ${self:service}${self:custom.titledStage}
+  application: ${self:service}
+
+provider:
+  name: aws
+  region: eu-central-1
+  runtime: nodejs18.x
+  stackName: ${self:service}${self:custom.titledStage}
+  logRetentionInDays: ${self:custom.logRetentionInDays}
+  tags:
+    Application: ${self:service}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - 'secretsmanager:DescribeSecret'
+            - 'secretsmanager:GetSecretValue'
+          Resource: arn:aws:secretsmanager:${aws:region}:${aws:accountId}:secret:*
+  # Environment Vars
+  environment:
+    ACCOUNT_ID: ${self:custom.accountId}
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1"
+    AWS_SDK_LOAD_CONFIG: "1"
+    STACK_NAME: ${self:custom.stackName}
+    STAGE: ${self:custom.stage}
+    APPLICATION: ${self:custom.application}
+    REGION: ${self:custom.region}
+
+package:
+  excludeDevDependencies: true
+  patterns:
+    - "!node_modules/**"
+    - "!resources/**"
+    - "!tests/**"
+    - "!stepFunctions/**"
+    - "!apiGateway/**"
+    - "!.git/**"
+    - "!_aws.scalars.graphql"
+    - "!babel.config.js"
+    - "!infos"
+    - "!jest.config.json"
+    - "!jsconfig.json"
+    - "!Makefile"
+    - "!package-lock.json"
+    - "!package.json"
+    - "!README.md"
+    - "!schema.graphql"
+    - "!test.sh"
+    - "!yarn.lock"
+
+plugins:
+  - serverless-better-credentials
+  - serverless-step-functions
+  - serverless-plugin-utils
+  - serverless-iam-roles-per-function
+  - serverless-cloudformation-changesets-v3
+
+layers:
+  commonLibs:
+    path: layers
+    compatibleRuntimes:
+      - nodejs18.x
+
+functions:
+  Http:
+    handler: functions/http.handler
+    timeout: 15
+    layers:
+      - { Ref: CommonLibsLambdaLayer }
+
+  Transformer:
+    handler: functions/transformer.handler
+    layers:
+      - { Ref: CommonLibsLambdaLayer }
+
+  Templater:
+    handler: functions/templater.handler
+    layers:
+      - { Ref: CommonLibsLambdaLayer }
+
+  Mock:
+    handler: functions/mock.handler
+    layers:
+      - { Ref: CommonLibsLambdaLayer }
+    events:
+      - http:
+          path: /mock/{any+}
+          method: ANY
+          private: false
+
+  Invoker:
+    handler: functions/invoker.handler
+    layers:
+      - { Ref: CommonLibsLambdaLayer }
+    iamRoleStatements:
+      - Effect: Allow
+        Action:
+          - states:StartSyncExecution
+          - states:StartExecution
+        Resource: arn:aws:states:${aws:region}:${aws:accountId}:stateMachine:*${self:custom.titledStage}
+    events:
+      - http:
+          path: /invoke/{any+}
+          method: ANY
+          private: false
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
+
+stepFunctions:
+  stateMachines:
+    getStarships:
+      ${file(./stepFunctions/getStarships.yml)}
+
+    analyzeCustomer:
+      ${file(./stepFunctions/analyzeCustomer.yml)}
+
+resources:
+  - ${file(./resources/stepFunction.yml)}
