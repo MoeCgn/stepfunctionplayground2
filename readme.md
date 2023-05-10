@@ -15,3 +15,4 @@ install [yarn](https://phoenixnap.com/kb/yarn-windows)
 ## assume
 
 install the [granted plugin](https://docs.commonfate.io/granted/getting-started/#installing-the-cli) # stepfunctionplayground2
+# stepfunctionplayground2
